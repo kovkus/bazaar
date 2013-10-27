@@ -54,6 +54,7 @@ session_start();
         		 }, 1000);
         		 $('.cart').load("cart/cart.php").fadeIn();
         		 $("#res-submit").show();
+        		 $(".ordercancel").show();
         		 setTimeout (function(){
         		 	$('.li_product').tipsy({gravity: 'w'});
         		 },500);
@@ -80,10 +81,12 @@ session_start();
         function cancel() {
         	$('.cart').load("cart/cancel.php").fadeIn();
         	$("#res-submit").hide();
+        	$(".ordercancel").hide();
         }
         function finalCancel() {
         	$('.final_cart').load("cart/cancel.php").fadeIn();
         	$("#res-submit").hide();
+        	$(".cancelbutton").hide();
         }
         function sendOrder() {
         	document.location = "index.php?page=send_order";
@@ -96,6 +99,7 @@ session_start();
 
         		 	if ($('.widget-content > span.cart:contains("Vaša objednávka je prázdna.")').length > 0) {
 			    $("#res-submit").hide();
+			    $(".ordercancel").hide();
 				}
 				if ($('.accent-box-page__right-inner > span.final_cart:contains("Vaša objednávka je prázdna.")').length > 0) {
 			    $("#res-submit").hide();

@@ -124,7 +124,7 @@ mysqli_close($link);
 									</div>
 								</div>
 
-							<button style="float:left" onClick="cancel()">STORNO</button>
+							<button class="ordercancel" style="float:left" onClick="cancel()">STORNO</button>
 						</div>
 					</div>
 	    			<div class="widget-categories widget widget__sidebar">
