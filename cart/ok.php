@@ -1,0 +1,1 @@
+<span>Objednávka bola úspešne odoslaná!</span>
