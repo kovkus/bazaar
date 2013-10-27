@@ -77,51 +77,16 @@
 			
 			<div id="content" class="span10">
 			<!-- content starts -->
+			    <?php
+    error_reporting(E_ALL ^ E_NOTICE);
+     if (!$_GET['page']) {
+      include "pages/intro.php";
+     }
+     else {
+     include "pages/".$_GET['page'].".php";
+     }
+    ?>
 			
-
-			<div>
-				<button class="btn btn-primary" onClick="location.reload();">Obnoviť</button>
-			</div>
-			
-			<div class="row-fluid ">
-				<div class="box span12">
-					<div class="box-header well" data-original-title>
-						<h2><i class="icon-user"></i> Objednávky</h2>
-						
-					</div>
-					<div class="box-content">
-						<table class="table table-striped table-bordered bootstrap-datatable datatable">
-						  <thead>
-							  <tr>
-								  <th>Meno</th>
-								  <th>Čas</th>
-								  <th>Status</th>
-								  <th>Akcie</th>
-							  </tr>
-						  </thead>   
-						  <tbody>
-							<tr>
-								<td>Meno</td>
-								<td class="center">00:00</td>
-								<td class="center">
-									<span class="label label-success">Vybavená</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="icon-zoom-in icon-white"></i>  
-										Zobraziť                                           
-									</a>
-								</td>
-							</tr>
-						  </tbody>
-					  </table>            
-					</div>
-				</div><!--/span-->
-			
-			</div><!--/row-->
-
-			
-    
 					<!-- content ends -->
 			</div><!--/#content.span10-->
 				</div><!--/fluid-row-->
@@ -172,7 +137,7 @@
 	<!-- calander plugin -->
 	<script src='js/fullcalendar.min.js'></script>
 	<!-- data table plugin -->
-	<script src='js/jquery.dataTables.min.js'></script>
+	
 
 	<!-- chart libraries start -->
 	<script src="js/excanvas.js"></script>
