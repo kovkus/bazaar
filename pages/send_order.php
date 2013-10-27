@@ -46,6 +46,7 @@
 													</div>
 												</div>
 																						<div class="center submit-button-wrap">
+																							<span>Skontrolujte si údaje pred odoslaním!<br><br></span>
 													<div class="action-btn-holder action-btn-holder__warning">
 														<input type="button" name="res-submit" id="res-submit" value="Objednať" onClick="sendOrderProceed();" class="action-btn"/>
 														<!-- Decoration -->
@@ -65,7 +66,7 @@
 												
 											
 													<span class="final_cart"></span><br>
-												<button style="float:left" onClick="finalCancel()">STORNO</button>
+												<button class="cancelbutton" style="float:left" onClick="finalCancel()">STORNO</button>
 											</div>
 											<div class="accent-box-page__right_sub"></div>
 										</div>

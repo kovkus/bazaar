@@ -1,1 +1,1 @@
-<span>Objednávka bola úspešne odoslaná!</span>
+<h3>Objednávka bola úspešne odoslaná!</h3>

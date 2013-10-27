@@ -53,9 +53,9 @@ session_start();
         		 	 document.getElementById("but_"+but_id+"").innerHTML="Objednať!";
         		 }, 1000);
         		 $('.cart').load("cart/cart.php").fadeIn();
+        		 $("#res-submit").show();
         		 setTimeout (function(){
         		 	$('.li_product').tipsy({gravity: 'w'});
-
         		 },500);
         	});
         }     
@@ -74,14 +74,16 @@ session_start();
         		
 
         	$('.accent-box-page__left-inner').load("cart/ok.php").fadeIn();
-        		console.log('send');
+        	$('.cancelbutton').hide();
         	});
         }
         function cancel() {
         	$('.cart').load("cart/cancel.php").fadeIn();
+        	$("#res-submit").hide();
         }
         function finalCancel() {
         	$('.final_cart').load("cart/cancel.php").fadeIn();
+        	$("#res-submit").hide();
         }
         function sendOrder() {
         	document.location = "index.php?page=send_order";
@@ -92,7 +94,14 @@ session_start();
    			 setTimeout (function(){
         		 	$('.li_product').tipsy({gravity: 'w'});
 
+        		 	if ($('.widget-content > span.cart:contains("Vaša objednávka je prázdna.")').length > 0) {
+			    $("#res-submit").hide();
+				}
+				if ($('.accent-box-page__right-inner > span.final_cart:contains("Vaša objednávka je prázdna.")').length > 0) {
+			    $("#res-submit").hide();
+				}
         		 },500);
+   			 
  		});
 
 	</script>
