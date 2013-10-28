@@ -1,6 +1,6 @@
 
 			<div>
-				<button class="btn btn-primary" onClick="location.reload();">Obnoviť</button>
+				<a href="index2.php"><button class="btn btn-primary">Obnoviť</button></a>
 			</div>
 			
 			<div class="row-fluid ">
@@ -10,6 +10,21 @@
 						
 					</div>
 					<div class="box-content">
+						<?php 
+						if ($_GET['success'] == "1") {
+							//$orderid = $_GET['orderid'];
+							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+							//$query = "UPDATE 'orders' SET 'status' = '1' WHERE 'id' = '$id';";
+							$id = mysqli_real_escape_string($link,$_GET['orderid']);
+							$query = "UPDATE `bazaar`.`orders` SET `status` = '1' WHERE `orders`.`id` = $id;";
+							mysqli_query($link, $query) or die(mysqli_error($link));
+							echo '
+						<div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">×</button>
+							<strong>Objednávka bola označená ako vybavená!</strong>
+						</div>';
+						}
+						?>
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>

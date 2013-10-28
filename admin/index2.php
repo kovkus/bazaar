@@ -62,7 +62,7 @@
 			<div class="span2 main-menu-span">
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked">
-						<li><a href="#"><i class="icon-align-justify"></i><span class="hidden-tablet">Objednávky</span></a></li>
+						<li><a href="index2.php"><i class="icon-align-justify"></i><span class="hidden-tablet">Objednávky</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
