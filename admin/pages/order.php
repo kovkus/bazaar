@@ -1,3 +1,11 @@
+<?php 
+session_start();
+$log = $_SESSION['logged'];
+if (!$log == "1") {
+	die();
+	echo "WRONG WAY GUY!!";
+}
+?>
 			<div class="row-fluid ">
 				<div class="box span4">
 					<div class="box-header well" data-original-title>

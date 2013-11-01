@@ -1,3 +1,11 @@
+<?php 
+session_start();
+$log = $_SESSION['logged'];
+if (!$log == "1") {
+	die();
+	echo "WRONG WAY GUY!!";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +56,9 @@
 			<div class="container-fluid">
 				<!-- user dropdown starts -->
 				<div class="btn-group pull-right" >
+					<a href="logout.php">
 					<button class="btn btn-large btn-primary visible-desktop" data-toggle="button">Odhlásenie</button>
+					</a>
 				</div>
 			<h1 style="color:white;">BazaarWeb Administration</h1>
 			</div>

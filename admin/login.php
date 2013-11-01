@@ -62,7 +62,7 @@
 						$type_of_account = $_POST['type_of_account'];
 						$password = md5($or_password);
 
-						if ($username == "admin" && $password == $rq_pass_admin && $type_of_account = "1") {
+						if ($username == "admin" && $password == $rq_pass_admin && $type_of_account == "1") {
 							$_SESSION['logged'] = "1";
 							$_SESSION['password'] = $password;
 							$_SESSION['type_of_account'] = "1";
@@ -72,7 +72,7 @@
 					<a href="index2.php"><button class="btn btn-large btn-primary visible-desktop" data-toggle="button">Pokračovať do systému</button></a>
 						';
 						}
-						elseif ($username == "casnik" && $password == $rq_pass_cas && $type_of_account = "2") {
+						elseif ($username == "casnik" && $password == $rq_pass_cas && $type_of_account == "2") {
 							$_SESSION['logged'] = "1";
 							$_SESSION['password'] = $password;
 							$_SESSION['type_of_account'] = "2";
