@@ -73,7 +73,12 @@ if (!$log == "1") {
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked">
 						<li><a href="index2.php"><i class="icon-align-justify"></i><span class="hidden-tablet">Objednávky</span></a></li>
-					</ul>
+						<?php
+						if ($_SESSION['type_of_account'] == "1") {
+							echo' <li><a href="?page=products"><i class="icon-align-justify"></i><span class="hidden-tablet">Produkty</span></a></li>';
+						}
+						?>
+						</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
 			<!-- left menu ends -->
