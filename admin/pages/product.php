@@ -14,7 +14,23 @@ if ($result = mysqli_query($link, $query)) {
 	 	$contains = $row[contains];
 	 	$height = $row[height];
 	 	$price = $row[price];
-
+	 	switch ($row[type_height]) {
+	 		case '1':
+	 			$selected1= "selected='selected'";
+	 			break;
+	 		case '2':
+	 			$selected2= "selected='selected'";
+	 			break;
+	 		case '3':
+	 			$selected3= "selected='selected'";
+	 			break;
+	 		case '4':
+	 			$selected4= "selected='selected'";
+	 			break;
+	 		case '5':
+	 			$selected5= "selected='selected'";
+	 			break;
+	 	}
 	 	include "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/pages/switch.php";
 	 } 
 	 }     
@@ -25,7 +41,7 @@ if ($result = mysqli_query($link, $query)) {
 						<h2><i class="icon-edit"></i> Produkt: <?php echo $name; ?></h2>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method=POST action="?page=saveproduct&id=<?php echo $id; ?>">
 						  <div class="control-group">
 								<label class="control-label" for="name">Názov</label>
 								<div class="controls">
@@ -59,11 +75,11 @@ if ($result = mysqli_query($link, $query)) {
 								<label class="control-label" for="type_of_height">Jednotka</label>
 								<div class="controls">
 								  <select id="type_of_height" name="type_of_height">
-									<option value="1">gramy</option>
-									<option value="3">kilogramy</option>
-									<option value="2">militre</option>
-									<option value="4">litre</option>
-									<option value="5">kusy</option>
+									<option value="1" <?php echo $selected1; ?>>gramy</option>
+									<option value="3" <?php echo $selected2; ?>>kilogramy</option>
+									<option value="2" <?php echo $selected3; ?>>militre</option>
+									<option value="4" <?php echo $selected4; ?>>litre</option>
+									<option value="5" <?php echo $selected5; ?>>kusy</option>
 								  </select>
 								</div>
 							  </div>
