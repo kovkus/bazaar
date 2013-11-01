@@ -17,7 +17,7 @@ else {
 	$products_sql = implode(",", $products);
 	$products_sql = mysqli_real_escape_string($link,$products_sql);
 	$time = time();
-	$query = "INSERT INTO orders VALUES (NULL,'$products_sql','$name','$address','$telephone','$payment','$time','$note','0');";
+	$query = "INSERT INTO orders VALUES (NULL,'$products_sql','$name','$address','$telephone','$payment','$time','$note','0','0','0','0');";
 	mysqli_query($link, $query) or die(mysqli_error($link));
 	session_destroy();
 }

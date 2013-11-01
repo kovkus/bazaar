@@ -11,17 +11,28 @@
 					</div>
 					<div class="box-content">
 						<?php 
-						if ($_GET['success'] == "1") {
-							//$orderid = $_GET['orderid'];
+						if ($_GET['order_success'] == "1") {
 							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
-							//$query = "UPDATE 'orders' SET 'status' = '1' WHERE 'id' = '$id';";
 							$id = mysqli_real_escape_string($link,$_GET['orderid']);
-							$query = "UPDATE `bazaar`.`orders` SET `status` = '1' WHERE `orders`.`id` = $id;";
+							$time = time();
+							$query = "UPDATE `bazaar`.`orders` SET `order_status` = '1', `order_status_time` = '$time' WHERE `orders`.`id` = $id;";
 							mysqli_query($link, $query) or die(mysqli_error($link));
 							echo '
 						<div class="alert alert-success">
 							<button type="button" class="close" data-dismiss="alert">×</button>
 							<strong>Objednávka bola označená ako vybavená!</strong>
+						</div>';
+						}
+						if ($_GET['send_success'] == "1") {
+							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+							$id = mysqli_real_escape_string($link,$_GET['orderid']);
+							$time = time();
+							$query = "UPDATE `bazaar`.`orders` SET `send_status` = '1', `send_status_time` = '$time' WHERE `orders`.`id` = $id;";
+							mysqli_query($link, $query) or die(mysqli_error($link));
+							echo '
+						<div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">×</button>
+							<strong>Objednávka bola označená ako expedovaná!</strong>
 						</div>';
 						}
 						?>
@@ -31,28 +42,38 @@
 								  <th>Meno</th>
 								  <th>Čas</th>
 								  <th>Status</th>
+								  <th></th>
 								  <th>Akcie</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
 							<tr>
-<?php 
+						<?php 
 							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
 							$query = "SELECT * FROM orders ORDER BY time DESC";
 							if ($result = mysqli_query($link, $query)) {
 								while ($row = mysqli_fetch_assoc($result)) {
-								if ($row[status] =="0") {
-									$status = '<span class="label label-important">NEVYBAVENÁ</span>';
+								if ($row[order_status] =="0") {
+									$order_status = '<span class="label label-important">NEVYBAVENÁ</span>';
 								}
-								elseif ($row[status] == "1") {
-									$status = '<span class="label label-success">VYBAVENÁ</span>';
+								elseif ($row[order_status] == "1") {
+									$order_status = '<span class="label label-success">VYBAVENÁ</span>';
+								}
+								if ($row[send_status] =="0") {
+									$send_status = '<span class="label label-important">NEODOSLANÁ</span>';
+								}
+								elseif ($row[send_status] == "1") {
+									$send_status = '<span class="label label-success">EXPEDOVANÁ</span>';
 								}
 								$time = strftime("%T",$row[time]);
 	 							echo '<tr>
 								<td>'.$row[name].'</td>
 								<td class="center">'.$time.'</td>
 								<td class="center">
-									'.$status.'
+									'.$order_status.'
+								</td>
+								<td class="center">
+									'.$send_status.'
 								</td>
 								<td class="center">
 									<a class="btn btn-success" href="?page=order&id='.$row[id].'">
@@ -64,7 +85,7 @@
 					        	}
 							} 
 							
-?>
+						 ?>
 						  </tbody>
 					  </table>            
 					</div>
