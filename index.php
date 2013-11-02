@@ -120,8 +120,10 @@ session_start();
 					<nav id="menu" class="primary clearfix" role="navigation">
 						<ul class="sf-menu">
 							<li><a href="index.php">Domov</a></li>
-							<li class="midsection"><a href="?page=order">Objednávka</a></li>
+							<li><a href="?page=menu">Denné menu</a></li>
+							<li class="midsection" ><a href="?page=order">Objednávka</a></li>
 							<li><a href="?page=gallery">Galéria</a></li>
+							<li><a href="#">Facebook</a></li>
 							<li><a href="?page=contact">Kontakt</a></li>
 						</ul>
 					</nav>
