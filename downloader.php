@@ -38,8 +38,9 @@ $products = array_values($products);
 $prices = array_values($prices);
 
 foreach ($products as $key => $value) {
-    if ($value == $products[1]) {
+    if ($key >= "2" && $value == $products[0]) {
        echo "Donáška";
+       echo "<br>";
     }
 	echo $value;
 	echo $prices[$key];
