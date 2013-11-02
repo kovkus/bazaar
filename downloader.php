@@ -16,7 +16,7 @@ foreach ($pr_nodelist as $n) {
     $i ++;
 }
 foreach($products as $key => $one) {
-    if(strpos($one, 'DONÁŠKA') !== false)
+    if(strpos($one, 'DON') !== false)
         unset($products[$key]);
 }
 
@@ -31,13 +31,16 @@ foreach ($ce_nodelist as $n) {
     $i ++;
 }
 foreach($prices as $key => $one) {
-    if(strpos($one, 'DONÁŠKA') !== false)
+    if(strpos($one, 'DON') !== false)
         unset($prices[$key]);
 }
 $products = array_values($products);
 $prices = array_values($prices);
 á
 foreach ($products as $key => $value) {
+    if ($value == $products[1]) {
+       echo "Donáška";
+    }
 	echo $value;
 	echo $prices[$key];
 	echo "<br>";
