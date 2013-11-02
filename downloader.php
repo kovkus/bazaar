@@ -36,7 +36,7 @@ foreach($prices as $key => $one) {
 }
 $products = array_values($products);
 $prices = array_values($prices);
-á
+
 foreach ($products as $key => $value) {
     if ($value == $products[1]) {
        echo "Donáška";
