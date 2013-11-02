@@ -31,6 +31,29 @@ if ($result = mysqli_query($link, $query)) {
 	 			$selected5= "selected='selected'";
 	 			break;
 	 	}
+	 	switch ($row[id_cat]) {
+	 		case '1':
+	 			$cselected1= "selected='selected'";
+	 			break;
+	 		case '2':
+	 			$cselected2= "selected='selected'";
+	 			break;
+	 		case '3':
+	 			$cselected3= "selected='selected'";
+	 			break;
+	 		case '4':
+	 			$cselected4= "selected='selected'";
+	 			break;
+	 		case '5':
+	 			$cselected5= "selected='selected'";
+	 			break;
+	 		case '6':
+	 			$cselected6= "selected='selected'";
+	 			break;
+	 		case '7':
+	 			$cselected7= "selected='selected'";
+	 			break;
+	 	}
 	 	include "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/pages/switch.php";
 	 } 
 	 }     
@@ -87,13 +110,13 @@ if ($result = mysqli_query($link, $query)) {
 								<label class="control-label" for="category">Kategória</label>
 								<div class="controls">
 								  <select id="category" name="category">
-									<option value="1">Pizza</option>
-									<option value="3">Maxi pizza</option>
-									<option value="2">Hambrugery</option>
-									<option value="4">Cestoviny</option>
-									<option value="5">Šaláty</option>
-									<option value="6">Minútky</option>
-									<option value="7">Nápoje</option>
+									<option value="1" <?php echo $cselected1; ?>>Pizza</option>
+									<option value="3" <?php echo $cselected2; ?>>Maxi pizza</option>
+									<option value="2" <?php echo $cselected3; ?>>Hambrugery</option>
+									<option value="4" <?php echo $cselected4; ?>>Cestoviny</option>
+									<option value="5" <?php echo $cselected5; ?>>Šaláty</option>
+									<option value="6" <?php echo $cselected6; ?>>Minútky</option>
+									<option value="7" <?php echo $cselected7; ?>>Nápoje</option>
 								  </select>
 								</div>
 							  </div>
