@@ -13,12 +13,15 @@ $products = array();
 $i = 0;
 foreach ($pr_nodelist as $n) {
     $products[$i] = $n->nodeValue;
+
+
+    
     $i ++;
 }
 foreach($products as $key => $one) {
     if(strpos($one, 'DON') !== false)
         unset($products[$key]);
-}
+}   
 
 
 $ce_xpath = new DOMXPath($html);
@@ -45,6 +48,15 @@ foreach ($products as $key => $value) {
 	echo $value;
 	echo $prices[$key];
 	echo "<br>";
+}
+require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+$query = 'TRUNCATE TABLE `menu_today`';
+mysqli_query($link, $query) or die(mysqli_error($link));
+foreach ($products as $key => $value) {
+    $name = mysqli_real_escape_string($link,$value);
+    $price = mysqli_real_escape_string($link,$prices[$key]);
+    $query = "INSERT INTO menu_today VALUES ('$name', '$price');";
+    mysqli_query($link, $query) or die(mysqli_error($link));
 }
 
 

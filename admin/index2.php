@@ -76,6 +76,7 @@ if (!$log == "1") {
 						<?php
 						if ($_SESSION['type_of_account'] == "1") {
 							echo' <li><a href="?page=products"><i class="icon-align-justify"></i><span class="hidden-tablet">Produkty</span></a></li>';
+							echo' <li><a href="?page=menu"><i class="icon-align-justify"></i><span class="hidden-tablet">Menu</span></a></li>';
 						}
 						?>
 						</ul>
