@@ -7,6 +7,7 @@ if (!$log == "1") {
 }
 ?>
 			<div class="row-fluid ">
+				<a href="?page=new_product"><button class="btn btn-primary">Nový produkt</button></a>
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-list"></i> Produkty</h2>

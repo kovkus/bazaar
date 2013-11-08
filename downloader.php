@@ -55,7 +55,7 @@ mysqli_query($link, $query) or die(mysqli_error($link));
 foreach ($products as $key => $value) {
     $name = mysqli_real_escape_string($link,$value);
     $price = mysqli_real_escape_string($link,$prices[$key]);
-    $query = "INSERT INTO menu_today VALUES ('$name', '$price');";
+    $query = "INSERT INTO menu_today VALUES (NULL,'$name', '$price');";
     mysqli_query($link, $query) or die(mysqli_error($link));
 }
 

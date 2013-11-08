@@ -46,6 +46,11 @@ if (!$log == "1") {
 
 	<!-- The fav icon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
+	<script>
+	function reload() {
+		$('#reloaded').load("../downloader.php").fadeIn();
+	}
+	</script>
 		
 </head>
 

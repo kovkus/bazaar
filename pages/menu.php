@@ -46,7 +46,6 @@ mysqli_close($link);
 	    			</div>
 	    		</div>
 	    		<!-- Primary Content / End -->
-	    		
 	    		<!-- Sidebar -->
 	    		<aside class="grid_3">
 	    								<div class="widget-categories widget widget__sidebar">
@@ -54,31 +53,7 @@ mysqli_close($link);
 							<h2>Objednávka</h2>
 						</div>
 						<div class="widget-content">
-							<span class="cart"></span>
-							<br>
-							<div class="submit-button-wrap clearfix">
-									<div class="fright action-btn-holder action-btn-holder__small action-btn-holder__warning">
-										<input type="button" name="send_order" id="res-submit" onClick="sendOrder()"value="objednať" class="action-btn"/>
-									</div>
-								</div>
-
-							<button class="ordercancel" style="float:left" onClick="cancel()">STORNO</button>
-						</div>
-					</div>
-	    			<div class="widget-categories widget widget__sidebar">
-						<div class="title-wrap title-wrap__smallest">
-							<h2>Kategórie</h2>
-						</div>
-						<div class="widget-content">
-						 	<ul>
-								<li><a href="?page=order&category=1">Pizza</a></li>
-								<li><a href="?page=order&category=2">Maxi Pizze</a></li>
-								<li><a href="?page=order&category=3">Hamburgery</a></li>
-								<li><a href="?page=order&category=4">Cestoviny/Omáčky</a></li>
-								<li><a href="?page=order&category=5">Šaláty</a></li>
-								<li><a href="?page=order&category=6">Minútky</a></li>
-								<li><a href="?page=order&category=7">Nápoje</a></li>
-							</ul>
+							<span>Objednávka denného menu na tel. čísle <strong>055 62 50 172</strong></span>
 						</div>
 					</div>
 
