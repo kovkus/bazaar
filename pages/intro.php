@@ -103,21 +103,36 @@
 						<!-- /Title -->
 						<!-- Schedule -->
 						<div class="schedule">
+							<?php
+							include "open_close.php";
+							?>
 							<h5>Pondelok</h5>
 							<ul class="unstyled">
-								<li><span class="time">9:45 - 22:00</span></li>
+								<li><span class="time"><?php echo $pondelok_od; echo ' - '; echo $pondelok_do;?></span></li>
 							</ul>
-							<h5>Utorok - Piatok</h5>
+							<h5>Utorok</h5>
 							<ul class="unstyled">
-								<li><span class="time">9:45 - 23:00</span></li>
+								<li><span class="time"><?php echo $utorok_od; echo ' - '; echo $utorok_do;?></span></li>
+							</ul>
+							<h5>Streda</h5>
+							<ul class="unstyled">
+								<li><span class="time"><?php echo $streda_od; echo ' - '; echo $streda_do;?></span></li>
+							</ul>
+							<h5>Štvrtok</h5>
+							<ul class="unstyled">
+								<li><span class="time"><?php echo $stvrtok_od; echo ' - '; echo $stvrtok_do;?></span></li>
+							</ul>
+							<h5>Piatok</h5>
+							<ul class="unstyled">
+								<li><span class="time"><?php echo $piatok_od; echo ' - '; echo $piatok_do;?></span></li>
 							</ul>
 							<h5>Sobota</h5>
 							<ul class="unstyled">
-								<li><span class="time">11:00 - 23:00</span></li>
+								<li><span class="time"><?php echo $sobota_od; echo ' - '; echo $sobota_do;?></span></li>
 							</ul>
 							<h5>Nedeľa</h5>
 							<ul class="unstyled">
-								<li><span class="time">11:30 - 21:00</span></li>
+								<li><span class="time"><?php echo $nedela_od; echo ' - '; echo $nedela_do;?></span></li>
 							</ul>
 						</div>
 						<!-- /Schedule -->
