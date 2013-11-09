@@ -1,39 +1,34 @@
-<?php
-$filename = '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/open_close.php';
-$somecontent = "
-	<?php
-	\$pondelok_od = 'test';
-	\$pondelok_do = 'test';
-	\$utorok_od = 'test';
-	\$utorok_do= 'test';
-	\$streda_od = 'test';
-	\$streda_do = 'test';
-	\$stvrtok_od = 'test';
-	\$stvrtok_do = 'test';
-	\$piatok_od = 'test';
-	\$piatok_do = 'test';
-	\$sobota_od = 'test';
-	\$sobota_do = 'test';
-	\$nedela_od = 'test';
-	\$nedela_do = 'test';
-	?>
-";
-if (is_writable($filename)) {
-    if (!$handle = fopen($filename, 'w+')) {
-         echo "Cannot open file ($filename)";
-         exit;
-    }
-    if (fwrite($handle, $somecontent) === FALSE) {
-        echo "Cannot write to file ($filename)";
-        exit;
-    }
-    echo '
-<div class="alert alert-success">
-<button type="button" class="close" data-dismiss="alert">×</button>
-<strong>Otváracie hodiny boli aktualizované!</strong>
-</div>';
-    fclose($handle);
-} else {
-    echo "The file $filename is not writable";
+<?php 
+session_start();
+$log = $_SESSION['logged'];
+if (!$log == "1") {
+	die();
+	echo "WRONG WAY GUY!!";
 }
+
+include '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/open_close.php';
 ?>
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i> Otváracie hodiny</h2>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal" method=POST action="?page=save_open_close">
+						  <table border="0" width="25%" cellpadding="3" cellspacing="3">
+						  	<tr><td>Pondelok</td><td><input type="text" style="width:40px;" name="pondelok_od" value="<?php echo $pondelok_od;?>"></td><td><input type="text" style="width:40px;" name="pondelok_do" value="<?php echo $pondelok_do;?>"></td></tr>
+						  	<tr><td>Utorok</td><td><input type="text" style="width:40px;" name="utorok_od" value="<?php echo $utorok_od;?>"></td><td><input type="text" style="width:40px;" name="utorok_do" value="<?php echo $utorok_do;?>"></td></tr>
+						  	<tr><td>Streda</td><td><input type="text" style="width:40px;" name="streda_od" value="<?php echo $streda_od;?>"></td><td><input type="text" style="width:40px;" name="streda_do" value="<?php echo $streda_do;?>"></td></tr>
+						  	<tr><td>Štvrtok</td><td><input type="text" style="width:40px;" name="stvrtok_od" value="<?php echo $stvrtok_od;?>"></td><td><input type="text" style="width:40px;" name="stvrtok_do" value="<?php echo $stvrtok_do;?>"></td></tr>
+						  	<tr><td>Piatok</td><td><input type="text" style="width:40px;" name="piatok_od" value="<?php echo $piatok_od;?>"></td><td><input type="text" style="width:40px;" name="piatok_do" value="<?php echo $piatok_do;?>"></td></tr>
+							<tr><td>Sobota</td><td><input type="text" style="width:40px;" name="sobota_od" value="<?php echo $sobota_od;?>"></td><td><input type="text" style="width:40px;" name="sobota_do" value="<?php echo $sobota_do;?>"></td></tr>			  					
+						  	<tr><td>Nedeľa</td><td><input type="text" style="width:40px;" name="nedela_od" value="<?php echo $nedela_od;?>"></td><td><input type="text" style="width:40px;" name="nedela_do" value="<?php echo $nedela_do;?>"></td></tr>
+						  </table>
+							  <input type="submit" value="Uložiť">
+						  </form>
+
+						</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+    

@@ -2,20 +2,20 @@
 $filename = '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/open_close.php';
 $somecontent = "
 	<?php
-	\$pondelok_od = 'test';
-	\$pondelok_do = 'test';
-	\$utorok_od = 'test';
-	\$utorok_do= 'test';
-	\$streda_od = 'test';
-	\$streda_do = 'test';
-	\$stvrtok_od = 'test';
-	\$stvrtok_do = 'test';
-	\$piatok_od = 'test';
-	\$piatok_do = 'test';
-	\$sobota_od = 'test';
-	\$sobota_do = 'test';
-	\$nedela_od = 'test';
-	\$nedela_do = 'test';
+	\$pondelok_od = '".$_POST['pondelok_od']."';
+	\$pondelok_do = '".$_POST['pondelok_do']."';
+	\$utorok_od = '".$_POST['utorok_od']."';
+	\$utorok_do= '".$_POST['utorok_do']."';
+	\$streda_od = '".$_POST['streda_od']."';
+	\$streda_do = '".$_POST['streda_do']."';
+	\$stvrtok_od = '".$_POST['stvrtok_od']."';
+	\$stvrtok_do = '".$_POST['stvrtok_do']."';
+	\$piatok_od = '".$_POST['piatok_od']."';
+	\$piatok_do = '".$_POST['piatok_do']."';
+	\$sobota_od = '".$_POST['sobota_od']."';
+	\$sobota_do = '".$_POST['sobota_do']."';
+	\$nedela_od = '".$_POST['nedela_od']."';
+	\$nedela_do = '".$_POST['nedela_do']."';
 	?>
 ";
 if (is_writable($filename)) {
