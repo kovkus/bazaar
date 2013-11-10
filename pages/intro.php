@@ -6,22 +6,10 @@
 							<div class="flexslider">
 								<ul class="slides">
 									<li>
-										<a href="#"><img src="http://placehold.it/603x343" /></a>
-										<div class="flexslide-caption">
-											<h2>tasty home cooking dish</h2>
-										</div>
+										<img src="images/threeandone.png" />
 									</li>
 									<li>
-										<a href="#"><img src="http://placehold.it/603x343" /></a>
-										<div class="flexslide-caption">
-											<h2>tasty home cooking dish</h2>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="http://placehold.it/603x343" /></a>
-										<div class="flexslide-caption">
-											<h2>tasty home cooking dish</h2>
-										</div>
+										<img src="images/concerts.png" />
 									</li>
 								</ul>
 							</div>
