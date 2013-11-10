@@ -83,6 +83,7 @@ if (!$log == "1") {
 							echo' <li><a href="?page=products"><i class="icon-align-justify"></i><span class="hidden-tablet">Produkty</span></a></li>';
 							echo' <li><a href="?page=menu"><i class="icon-align-justify"></i><span class="hidden-tablet">Menu</span></a></li>';
 							echo' <li><a href="?page=open_close"><i class="icon-align-justify"></i><span class="hidden-tablet">Otváracie hodiny</span></a></li>';
+							echo' <li><a href="?page=shipping"><i class="icon-align-justify"></i><span class="hidden-tablet">Donášková služba</span></a></li>';
 						}
 						?>
 						</ul>

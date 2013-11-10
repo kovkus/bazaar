@@ -29,24 +29,9 @@
 						
 						<!-- Intro -->
 						<section class="intro">
-							<h1><strong class="big">Vitajte</strong> v <span class="highlight">Pizza Bazaar</span></h1>
+							<br><br><br><h1><strong class="big">Vitajte</strong> v <span class="highlight">Pizza Bazaar</span></h1>
 							<div class="desc"> 
 							</div>
-							<!-- Action Button -->
-							<div class="action-btn-holder action-btn-holder__warning">
-								<a href="#" id="booking-table-trigger" class="action-btn">
-									<span class="txt-wrapper">
-										rezervovať stôl
-										<!-- Stars under text -->
-										<i class="star star__first"></i>
-										<i class="star star__second star__big"></i>
-										<i class="star star__third"></i>
-										<!-- Stars under text / End -->
-									</span>
-								</a>
-								<span class="action-btn-back"></span>
-							</div>
-							<!-- Action Button / End -->
 						</section>
 						<!-- Intro / End -->
 					</div>

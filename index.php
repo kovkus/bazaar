@@ -110,7 +110,14 @@ session_start();
 
 	</script>
 </head>
-
+<?php
+require "time.php";
+if ($timeisok == "1") {
+	$menu_link = "Objednávka";
+} elseif ($timeisok == "0") {
+	$menu_link = "Naša ponuka";
+}
+?>
 <body>
 	<div id="wrapper">
 		<header id="header" class="header">
@@ -121,9 +128,9 @@ session_start();
 						<ul class="sf-menu">
 							<li><a href="index.php">Domov</a></li>
 							<li><a href="?page=menu">Denné menu</a></li>
-							<li class="midsection" ><a href="?page=order">Objednávka</a></li>
+							<li class="midsection" ><a href="?page=order"><?php echo $menu_link;?></a></li>
 							<li><a href="?page=gallery">Galéria</a></li>
-							<li><a href="#">Facebook</a></li>
+							<li><a href="https://www.facebook.com/BazaarPUB" target="_blank">Facebook</a></li>
 							<li><a href="?page=contact">Kontakt</a></li>
 						</ul>
 					</nav>
@@ -221,16 +228,6 @@ session_start();
 							</div>
 						</div>
 						<!-- Pages Widget / End -->
-					</div>
-					<div class="grid_2">
-						<!-- Social Widget -->
-						<div class="widget-social widget widget__footer">
-							<h3 class="widget-title">Facebook</h3>
-							<div class="widget-content">
-								
-							</div>
-						</div>
-						<!-- Social Widget / End -->
 					</div>
 					<div class="grid_3">
 						<!-- Contacts Widget -->

@@ -38,7 +38,10 @@
 		    					<ul class="menu menu__list unstyled">
 		    					<?php
 require "config.php";
-
+require "time.php";
+	if ($timeisok == "0") {
+		session_destroy();
+	}
   if (!$_GET['category']) {
      $id_cat = "1";
      }
@@ -67,9 +70,10 @@ if ($result = mysqli_query($link, $query)) {
 		    							</div>
 		    							<div class="item-meta">
 	    									<span class="item-price">&nbsp;&nbsp;&nbsp;'.$row[price].' €</span>
-	    									<a href="#">
-	    										<button id="but_'.$row[id].'" onClick="addProduct('.$row[id].')">Objednať!</button>
-	    									</a>
+	    									<a href="#">';
+	    		if ($timeisok == "1") {							
+	    		echo '								<button id="but_'.$row[id].'" onClick="addProduct('.$row[id].')">Objednať!</button>';}
+	    		echo '							</a>
 	    								</div>
 		    						</li>
 		 ';
@@ -88,13 +92,14 @@ if ($result = mysqli_query($link, $query)) {
 		    								<div class="item-excerpt">'.$row[contains].'</div>
 		    							</div>
 		    							<div class="item-meta">
-	    									<span class="item-price">&nbsp;&nbsp;&nbsp;'.$row[price].' €</span>
-	    									
-	    										<button id="but_'.$row[id].'" onClick="addProduct('.$row[id].')">Objednať!</button>
-	    									
+	    									<span class="item-price">&nbsp;&nbsp;&nbsp;'.$row[price].' €</span>';
+	    		if ($timeisok == "1") {							
+	    		echo '								<button id="but_'.$row[id].'" onClick="addProduct('.$row[id].')">Objednať!</button>';}
+	    		echo '							
 	    								</div>
 		    						</li>
-		 ';
+		 ';							
+	    								
    		 }
 	}
 }
@@ -111,7 +116,9 @@ mysqli_close($link);
 	    		
 	    		<!-- Sidebar -->
 	    		<aside class="grid_3">
-	    								<div class="widget-categories widget widget__sidebar">
+	    								<?php 
+						if ($timeisok == "1") {
+								echo ' <div class="widget-categories widget widget__sidebar">
 						<div class="title-wrap title-wrap__smallest">
 							<h2>Objednávka</h2>
 						</div>
@@ -126,7 +133,11 @@ mysqli_close($link);
 
 							<button class="ordercancel" style="float:left" onClick="cancel()">STORNO</button>
 						</div>
-					</div>
+					</div>'; }
+					elseif ($timeisok == "0") {
+						echo "<span><strong>Donášková služba je zatvorená!</strong></span><br><br>";
+					}
+							?>
 	    			<div class="widget-categories widget widget__sidebar">
 						<div class="title-wrap title-wrap__smallest">
 							<h2>Kategórie</h2>

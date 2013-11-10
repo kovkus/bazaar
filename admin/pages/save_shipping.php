@@ -1,6 +1,6 @@
 <?php
-session_start();
-$filename = '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/open_close.php';
+session_start();	
+$filename = '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/shipping.php';
 $somecontent = "
 	<?php
 	\$pondelok_od = '".$_POST['pondelok_od']."';
@@ -31,7 +31,7 @@ if (is_writable($filename)) {
     echo '
 <div class="alert alert-success">
 <button type="button" class="close" data-dismiss="alert">×</button>
-<strong>Otváracie hodiny boli aktualizované!</strong>
+<strong>Donášková služba bola aktualizovaná!</strong>
 </div>';
     fclose($handle);
 } else {

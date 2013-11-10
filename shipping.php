@@ -13,5 +13,5 @@
 	$sobota_od = '11:30';
 	$sobota_do = '23:59';
 	$nedela_od = '12:00';
-	$nedela_do = '23:59';
+	$nedela_do = '22:00';
 	?>
