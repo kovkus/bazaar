@@ -4,7 +4,7 @@
 	$pondelok_do = '22:00';
 	$utorok_od = '11:00';
 	$utorok_do= '23:00';
-	$streda_od = '11:00';
+	$streda_od = '19:00';
 	$streda_do = '23:59';
 	$stvrtok_od = '11:00';
 	$stvrtok_do = '23:59';
