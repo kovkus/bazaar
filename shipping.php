@@ -8,7 +8,7 @@
 	$streda_do = '23:59';
 	$stvrtok_od = '11:00';
 	$stvrtok_do = '23:59';
-	$piatok_od = '11:00';
+	$piatok_od = '07:00';
 	$piatok_do = '23:59';
 	$sobota_od = '11:30';
 	$sobota_do = '23:59';
