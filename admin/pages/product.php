@@ -54,7 +54,7 @@ if ($result = mysqli_query($link, $query)) {
 	 			$cselected7= "selected='selected'";
 	 			break;
 	 	}
-	 	include "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/pages/switch.php";
+	 	include "/data/b/a/bazaar-pizza.sk/web/pages/switch.php";
 	 } 
 	 }     
 ?>

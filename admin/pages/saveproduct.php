@@ -10,11 +10,11 @@ $price = mysqli_real_escape_string($link,$_POST['price']);
 $category = mysqli_real_escape_string($link,$_POST['category']);
 
 if ($idg == "new") {
-	$query = "INSERT INTO `bazaar`.`products` VALUES (NULL, '$category', '$name', '$height', '$type_of_height', '$contains', '$price')";
+	$query = "INSERT INTO `ozxuu2e3`.`products` VALUES (NULL, '$category', '$name', '$height', '$type_of_height', '$contains', '$price')";
 }
 
 else {
-	$query = "UPDATE `bazaar`.`products` SET `name` = '$name', `contains` = '$contains', `height` = '$height', `type_height` = '$type_of_height', `price` = '$price', `id_cat` = '$category' WHERE `products`.`id` = '$id';";
+	$query = "UPDATE `ozxuu2e3`.`products` SET `name` = '$name', `contains` = '$contains', `height` = '$height', `type_height` = '$type_of_height', `price` = '$price', `id_cat` = '$category' WHERE `products`.`id` = '$id';";
 }
 mysqli_query($link, $query) or die(mysqli_error($link));
 echo '

@@ -56,7 +56,7 @@ if (!$log == "1") {
 						  <tbody>
 							<tr>
 						<?php 
-							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+							require "/data/b/a/bazaar-pizza.sk/web/config.php";
 							$query = "SELECT * FROM orders ORDER BY time DESC";
 							if ($result = mysqli_query($link, $query)) {
 								while ($row = mysqli_fetch_assoc($result)) {
