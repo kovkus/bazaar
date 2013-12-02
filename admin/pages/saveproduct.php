@@ -1,5 +1,5 @@
 <?php
-require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+require "/data/b/a/bazaar-pizza.sk/web/config.php";
 $idg = $_GET['id'];
 $id = mysqli_real_escape_string($link,$_GET['id']);
 $name = mysqli_real_escape_string($link,$_POST['name']);

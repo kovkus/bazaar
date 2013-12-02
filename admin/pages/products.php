@@ -16,7 +16,7 @@ if (!$log == "1") {
 					<div class="box-content">
 						<?php 
 						if ($_GET['order_success'] == "1") {
-							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+							require "/data/b/a/bazaar-pizza.sk/web/config.php";
 							$id = mysqli_real_escape_string($link,$_GET['orderid']);
 							$time = time();
 							$query = "UPDATE `bazaar`.`orders` SET `order_status` = '1', `order_status_time` = '$time' WHERE `orders`.`id` = $id;";

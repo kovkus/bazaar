@@ -5,7 +5,7 @@ if (!$log == "1") {
 	die();
 	echo "WRONG WAY GUY!!";
 }
-require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+require "/data/b/a/bazaar-pizza.sk/web/config.php";
 $id = $_GET['id'];
 $query = "SELECT * FROM products WHERE id = $id";
 if ($result = mysqli_query($link, $query)) {

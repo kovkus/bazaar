@@ -6,7 +6,7 @@ if (!$log == "1") {
 	echo "WRONG WAY GUY!!";
 }
 
-include '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/shipping.php';
+include '/data/b/a/bazaar-pizza.sk/web/shipping.php';
 ?>
 			<div class="row-fluid sortable">
 				<div class="box span12">

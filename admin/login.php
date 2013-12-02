@@ -56,7 +56,7 @@
 				<div class="well span5 center login-box">
 					<?php
 						session_start();
-						require "../config.php";
+						require "/data/b/a/bazaar-pizza.sk/web/config.php";
 						$username = $_POST['username'];
 						$or_password = $_POST['password'];
 						$type_of_account = $_POST['type_of_account'];

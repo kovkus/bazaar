@@ -1,6 +1,6 @@
 <?php
 session_start();	
-$filename = '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/shipping.php';
+$filename = '/data/b/a/bazaar-pizza.sk/web/shipping.php';
 $somecontent = "
 	<?php
 	\$pondelok_od = '".$_POST['pondelok_od']."';

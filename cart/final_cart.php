@@ -9,7 +9,7 @@ else {
 	echo "<ul>";
 $products = $_SESSION['product'];
 $price_sub = 0;
-require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+require "/data/b/a/bazaar-pizza.sk/web/config.php";
 foreach ($products as $prd) {
 $query = "SELECT * FROM products WHERE id = $prd";
 if ($result = mysqli_query($link, $query)) {

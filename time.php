@@ -1,5 +1,5 @@
 <?php
-include '/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/shipping.php';
+include '/data/b/a/bazaar-pizza.sk/web/shipping.php';
 $actuall_time = time();
 $pondelok_od = strtotime("Monday ".$pondelok_od."");
 $pondelok_do = strtotime("Monday ".$pondelok_do."");

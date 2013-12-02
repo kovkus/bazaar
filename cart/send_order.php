@@ -7,7 +7,7 @@ if (empty($_SESSION['product'])) {
 	echo "0";
 }
 else {
-	require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+	require "/data/b/a/bazaar-pizza.sk/web/config.php";
 	$name = mysqli_real_escape_string($link,$_POST['sopname']);
 	$address = mysqli_real_escape_string($link,$_POST['sopadress']);
 	$telephone = mysqli_real_escape_string($link,$_POST['soptelephone']);
