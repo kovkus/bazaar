@@ -22,7 +22,7 @@ if (!$log == "1") {
 							require "/data/b/a/bazaar-pizza.sk/web/config.php";
 							$id = mysqli_real_escape_string($link,$_GET['orderid']);
 							$time = time();
-							$query = "UPDATE `bazaar`.`orders` SET `order_status` = '1', `order_status_time` = '$time' WHERE `orders`.`id` = $id;";
+							$query = "UPDATE `ozxuu2e3`.`orders` SET `order_status` = '1', `order_status_time` = '$time' WHERE `orders`.`id` = $id;";
 							mysqli_query($link, $query) or die(mysqli_error($link));
 							echo '
 						<div class="alert alert-success">
@@ -31,10 +31,10 @@ if (!$log == "1") {
 						</div>';
 						}
 						if ($_GET['send_success'] == "1") {
-							require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
+							require "/data/b/a/bazaar-pizza.sk/web/config.php";
 							$id = mysqli_real_escape_string($link,$_GET['orderid']);
 							$time = time();
-							$query = "UPDATE `bazaar`.`orders` SET `send_status` = '1', `send_status_time` = '$time' WHERE `orders`.`id` = $id;";
+							$query = "UPDATE `ozxuu2e3`.`orders` SET `send_status` = '1', `send_status_time` = '$time' WHERE `orders`.`id` = $id;";
 							mysqli_query($link, $query) or die(mysqli_error($link));
 							echo '
 						<div class="alert alert-success">
