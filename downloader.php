@@ -7,7 +7,7 @@ $html = new DOMDocument();
 @$html-> loadHtml($source);
 
 $pr_xpath = new DOMXPath($html);
-$pr_nodelist = $pr_xpath->query( "//div[@class='ostatne_menu']/div[@class='jedlo_polozka']/div[@class='left']" );
+$pr_nodelist = $pr_xpath->query( "//div[@class='dnesne_menu']/div[@class='jedlo_polozka']/div[@class='left']" );
 $products = array();
 
 $i = 0;
@@ -25,7 +25,7 @@ foreach($products as $key => $one) {
 
 
 $ce_xpath = new DOMXPath($html);
-$ce_nodelist = $ce_xpath->query( "//div[@class='ostatne_menu']/div[@class='jedlo_polozka']/span[@class='right']" );
+$ce_nodelist = $ce_xpath->query( "//div[@class='dnesne_menu']/div[@class='jedlo_polozka']/span[@class='right']" );
 $prices = array();
 
 $i = 0;
@@ -49,15 +49,15 @@ foreach ($products as $key => $value) {
 	echo $prices[$key];
 	echo "<br>";
 }
-// require "/Applications/XAMPP/xamppfiles/htdocs/david/bazaar/config.php";
-// $query = 'TRUNCATE TABLE `menu_today`';
-// mysqli_query($link, $query) or die(mysqli_error($link));
-// foreach ($products as $key => $value) {
-//     $name = mysqli_real_escape_string($link,$value);
-//     $price = mysqli_real_escape_string($link,$prices[$key]);
-//     $query = "INSERT INTO menu_today VALUES (NULL,'$name', '$price');";
-//     mysqli_query($link, $query) or die(mysqli_error($link));
-// }
+require "/data/b/a/bazaar-pizza.sk/web/config.php";
+$query = 'TRUNCATE TABLE `menu_today`';
+mysqli_query($link, $query) or die(mysqli_error($link));
+foreach ($products as $key => $value) {
+    $name = mysqli_real_escape_string($link,$value);
+    $price = mysqli_real_escape_string($link,$prices[$key]);
+    $query = "INSERT INTO menu_today VALUES (NULL,'$name', '$price');";
+    mysqli_query($link, $query) or die(mysqli_error($link));
+}
 
 
 ?>
