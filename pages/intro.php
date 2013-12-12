@@ -21,7 +21,7 @@
 										<img src="images/art_coustic.png" />
 									</li>
 									<li>
-										<img src="images/23_30__12.png" />
+										<img src="images/24_30__12.png" />
 									</li>
 									<li>
 										<img src="images/katka_rafo.png" />
