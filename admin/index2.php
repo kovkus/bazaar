@@ -38,6 +38,11 @@ if (!$log == "1") {
 	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
 	<link href='css/opa-icons.css' rel='stylesheet'>
 	<link href='css/uploadify.css' rel='stylesheet'>
+	<?php
+	if ($_SESSION['type_of_account'] == "2") {
+	echo '<meta http-equiv="refresh" content="60; url=\'http://bazaar-pizza.sk/admin/index2.php\'">';
+	}
+	?>
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>

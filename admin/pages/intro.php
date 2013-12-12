@@ -57,7 +57,11 @@ if (!$log == "1") {
 							<tr>
 						<?php 
 							require "/data/b/a/bazaar-pizza.sk/web/config.php";
-							$query = "SELECT * FROM orders ORDER BY time DESC";
+							$cas = date('d.m.Y');
+							$vcerajsi = date('d.m.Y',strtotime("-1 days"));
+							$vcerajsi_unix = strtotime($vcerajsi);
+							//echo $vcerajsi_unix; 
+							$query = "SELECT * FROM orders WHERE time >= $vcerajsi_unix ORDER BY time DESC";
 							if ($result = mysqli_query($link, $query)) {
 								while ($row = mysqli_fetch_assoc($result)) {
 								if ($row[order_status] =="0") {
