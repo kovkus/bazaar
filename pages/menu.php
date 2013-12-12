@@ -20,9 +20,21 @@ if ($result = mysqli_query($link, $query)) {
        	 array_push($today_products_price, $row[price]);
    		 }
 }
+$setted = "0";
 foreach ($today_products_name as $key => $value) {
+		$trimmed = trim($value, " \t.\0.\n");
+		$trimmed2 = trim($today_products_name[0], " \t.\0.\n");
+
+
+	
+	if ($setted=="0" && $key >= "2" && strpos($trimmed,$trimmed2)!== false) {
+		 echo '<h1 class="dotted">Donáška (denné menu)</h1>';
+		 echo "<h2>DONÁŠKA DENNÉHO MENU - 0,60 €. PRI OBJEDNÁVKE 3 A VIAC MENU - DONÁŠKA ZADARMO.</h2>";
+		 $setted = "1";
+	}
 	if ($key >= "2" && $value == $today_products_name[0]) {
-       echo '<h1 class="dotted">Donáška</h1>';
+     echo '<h1 class="dotted">Donáška (denné menu)</h1>';
+	 echo "<h2>DONÁŠKA DENNÉHO MENU - 0,60 €. PRI OBJEDNÁVKE 3 A VIAC MENU - DONÁŠKA ZADARMO.</h2>";
    }
 	 echo '		    						<li class="menu-item menu-item__featured clearfix">	
 		    							<div class="item-body">

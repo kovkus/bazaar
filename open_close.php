@@ -5,7 +5,7 @@
 	$utorok_od = '11:00';
 	$utorok_do= '23:00';
 	$streda_od = '11:00';
-	$streda_do = '23:59';
+	$streda_do = '23:00';
 	$stvrtok_od = '11:00';
 	$stvrtok_do = '23:59';
 	$piatok_od = '11:00';

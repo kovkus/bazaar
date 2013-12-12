@@ -113,7 +113,7 @@ session_start();
 <?php
 require "time.php";
 if ($timeisok == "1") {
-	$menu_link = "Objednávka";
+	$menu_link = "Donáška";
 } elseif ($timeisok == "0") {
 	$menu_link = "Naša ponuka";
 }

@@ -23,7 +23,7 @@
 							<div class="project-feed project-feed__four-cols">
 							   <div class="project-item food">
 							      <figure class="project-img">
-										<a href="gallery/pizza.JPG" rel="prettyphoto[gallery]" title="Pizza"><img src="gallery/thumb/pizza.JPG" alt="" />
+										<a href="gallery/pizza.jpg" rel="prettyphoto[gallery]" title="Pizza"><img src="gallery/thumb/pizza.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>
@@ -31,7 +31,7 @@
 							   </div>
 							   <div class="project-item food">
 							      <figure class="project-img">
-										<a href="gallery/salat_1.JPG" rel="prettyphoto[gallery]" title="Šalát"><img src="gallery/thumb/salat_1.JPG" alt="" />
+										<a href="gallery/salat_1.jpg" rel="prettyphoto[gallery]" title="Šalát"><img src="gallery/thumb/salat_1.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>
@@ -39,7 +39,7 @@
 							   </div>
 							   <div class="project-item food">
 							      <figure class="project-img">
-										<a href="gallery/salat_2.JPG" rel="prettyphoto[gallery]" title="Šalát"><img src="gallery/thumb/salat_2.JPG" alt="" />
+										<a href="gallery/salat_2.jpg" rel="prettyphoto[gallery]" title="Šalát"><img src="gallery/thumb/salat_2.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>
@@ -47,7 +47,7 @@
 							   </div>
 							   <div class="project-item food">
 							      <figure class="project-img">
-										<a href="gallery/hamburger_1.JPG" rel="prettyphoto[gallery]" title="Hamburger"><img src="gallery/thumb/hamburger_1.JPG" alt="" />
+										<a href="gallery/hamburger_1.jpg" rel="prettyphoto[gallery]" title="Hamburger"><img src="gallery/thumb/hamburger_1.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>
@@ -55,7 +55,7 @@
 							   </div>
 							   <div class="project-item restaurant">
 							      <figure class="project-img">
-										<a href="gallery/priestory_1.JPG" rel="prettyphoto[gallery]" title="Priestory"><img src="gallery/thumb/priestory_1.JPG" alt="" />
+										<a href="gallery/priestory_1.jpg" rel="prettyphoto[gallery]" title="Priestory"><img src="gallery/thumb/priestory_1.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>
@@ -63,7 +63,7 @@
 							   </div>
 							   <div class="project-item restaurant">
 							      <figure class="project-img">
-										<a href="gallery/priestory_2.JPG" rel="prettyphoto[gallery]" title="Priestory"><img src="gallery/thumb/priestory_2.JPG" alt="" />
+										<a href="gallery/priestory_2.jpg" rel="prettyphoto[gallery]" title="Priestory"><img src="gallery/thumb/priestory_2.jpg" alt="" />
 											<span class="mask"></span>
 											<i class="icon-zoom"></i>
 										</a>

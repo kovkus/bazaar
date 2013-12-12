@@ -11,6 +11,9 @@
 									<li>
 										<img src="images/concerts.png" />
 									</li>
+									<li>
+										<img src="images/10_16__12.png" />
+									</li>
 								</ul>
 							</div>
 						</div>
