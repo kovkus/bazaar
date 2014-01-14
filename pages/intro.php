@@ -9,24 +9,6 @@
 										<img src="images/threeandone.png" />
 									</li>
 									<li>
-										<img src="images/concerts.png" />
-									</li>
-									<li>
-										<img src="images/10_16__12.png" />
-									</li>
-									<li>
-										<img src="images/17_23__12.png" />
-									</li>
-									<li>
-										<img src="images/art_coustic.png" />
-									</li>
-									<li>
-										<img src="images/24_30__12.png" />
-									</li>
-									<li>
-										<img src="images/katka_rafo.png" />
-									</li>
-									<li>
 										<img src="images/unisono.png" />
 									</li>
 								</ul>

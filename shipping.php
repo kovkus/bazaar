@@ -2,11 +2,11 @@
 	<?php
 	$pondelok_od = '09:45';
 	$pondelok_do = '22:00';
-	$utorok_od = '09:45';
+	$utorok_od = '9:50';
 	$utorok_do= '22:55';
-	$streda_od = '09:45';
+	$streda_od = '9:50';
 	$streda_do = '22:55';
-	$stvrtok_od = '09:45';
+	$stvrtok_od = '9:50';
 	$stvrtok_do = '22:55';
 	$piatok_od = '09:50';
 	$piatok_do = '22:55';

@@ -7,10 +7,25 @@ session_start();
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Bazaar Košice</title>
-	<meta name="description" content="pizza,obedy,menu,kosice">
-	<meta name="author" content="David Kovac">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Bazaar Pizza Košice</title>
+	<?php
+     if (!$_GET['page']) {
+      include "seo/intro.php";
+     }
+     else {
+     	$file = "seo/".$_GET['page'].".php";
+		if (file_exists($file)) {
+		    	include $file;
+		    }    
+		else {
+			include "seo/intro.php";
+		}
+    
+     }
+    ?>
+  	<meta name="language" content="sk" />	
+	<meta name="author" content="David Kovac" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<link rel="stylesheet" href="css/normalize.css" media="screen" />
 	<link rel="stylesheet" href="css/skeleton.css" media="screen" />
 	<link rel="stylesheet" href="css/base.css" media="screen" />
@@ -268,7 +283,7 @@ if ($timeisok == "1") {
 						<div class="prefix_1" >
 							<!-- Copyright -->
 							<div class="copyright" style="color:#eedec4">
-								Copyright &copy; 2013, Bazaar Pizza. All rights reserved. 
+								&copy; 2013, Bazaar Pizza Košice. Všetky práva vyhradené. 
 								<div class="clearfix">
 									<div class="fright" style="color:#eedec4;">By: <a href="#" style="color:#eedec4">Dávid Kováč</a></div>
 								</div>
