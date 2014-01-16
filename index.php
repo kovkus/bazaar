@@ -4,10 +4,19 @@ session_start();
 <!DOCTYPE html>
 <!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="sk">  <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Bazaar Pizza Košice</title>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=196494813890518";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+  
 	<?php
      if (!$_GET['page']) {
       include "seo/intro.php";
@@ -280,8 +289,11 @@ if ($timeisok == "1") {
 						<!-- Contacts Widget / End -->
 					</div>
 					<div class="grid_5 colborder">
-						<div class="prefix_1" >
-							<!-- Copyright -->
+						<div class="prefix_1" >  
+              	<!-- Facebook like box / start -->
+              <div class="fb-like-box" data-href="https://www.facebook.com/BazaarPUB" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+               	<!-- Facebook like box / End -->
+            	<!-- Copyright -->
 							<div class="copyright" style="color:#eedec4">
 								&copy; 2013, Bazaar Pizza Košice. Všetky práva vyhradené. 
 								<div class="clearfix">
